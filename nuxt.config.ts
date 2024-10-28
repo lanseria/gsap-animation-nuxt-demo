@@ -1,4 +1,3 @@
-import { pwa } from './app/config/pwa'
 import { appDescription } from './app/constants/index'
 
 export default defineNuxtConfig({
@@ -12,7 +11,7 @@ export default defineNuxtConfig({
   ],
 
   devtools: {
-    enabled: true,
+    enabled: false,
   },
 
   app: {
@@ -38,7 +37,8 @@ export default defineNuxtConfig({
   ],
 
   colorMode: {
-    classSuffix: '',
+    preference: 'dark',
+    fallback: 'dark',
   },
 
   future: {
@@ -64,7 +64,6 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: false,
       routes: ['/'],
-      ignore: ['/hi'],
     },
   },
 
@@ -76,6 +75,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  pwa,
 })
